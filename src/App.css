@@ -1,0 +1,47 @@
+#root {
+  width: 80%;
+  margin: auto;
+}
+
+.title {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+ul {
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+li {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn-wrap {
+  display: flex;
+  justify-self: end;
+}
+
+.btn {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.btn-remove {
+  background-color: #f05454;
+}
+
+.btn-edit {
+  background-color: #ecb365;
+}

@@ -83,7 +83,7 @@ function App() {
 
   return (
     <>
-      <h1>Todo</h1>
+      <h1 className="title">Todo</h1>
       <p className="message">{message}</p>
       <form onSubmit={saveTodo}>
         <input
@@ -92,8 +92,14 @@ function App() {
           value={activity}
           onChange={(event) => setActivity(event.target.value)}
         />
-        <button type="submit">{edit.id ? "save" : "submit"}</button>
-        {edit.id && <button onClick={cancelEdit}>cancel</button>}
+        <button className="btn" type="submit">
+          {edit.id ? "save" : "submit"}
+        </button>
+        {edit.id && (
+          <button className="btn" onClick={cancelEdit}>
+            cancel
+          </button>
+        )}
       </form>
       {todos.length > 0 ? (
         <ul>
@@ -106,9 +112,19 @@ function App() {
                   onChange={doneTodo.bind(this, todo)}
                 />
                 {todo.activity}
-                {todo.done ? "(done)" : "(not finished yet)"}
-                <button onClick={removeTodo.bind(this, todo.id)}>remove</button>
-                <button onClick={editTodo.bind(this, todo)}>edit</button>
+                {todo.done ? " (done)" : " (not finished yet)"}
+                <button
+                  className="btn btn-remove"
+                  onClick={removeTodo.bind(this, todo.id)}
+                >
+                  Remove
+                </button>
+                <button
+                  className="btn btn-edit"
+                  onClick={editTodo.bind(this, todo)}
+                >
+                  Edit
+                </button>
               </li>
             )
           })}
