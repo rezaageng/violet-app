@@ -5,6 +5,7 @@ import About from "./About"
 import AboutMe from "./AboutMe"
 import Blog from "./Blog"
 import BlogDetail from "./BlogDetail"
+import NotFound from "./NotFound"
 function App() {
   return (
     <div class="app">
@@ -20,6 +21,7 @@ function App() {
         </Route>
         <Route path="blog" element={<Blog />} />
         <Route path="blog/:slug" element={<BlogDetail />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   )
