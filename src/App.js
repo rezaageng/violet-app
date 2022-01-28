@@ -8,17 +8,20 @@ import BlogDetail from "./BlogDetail"
 import NotFound from "./NotFound"
 import Login from "./Login"
 import Dasboard from "./Dashboard"
+import Todo from "./Todo"
 function App() {
   return (
     <div class="app">
       <nav>
         <Link to="/">Home</Link>
+        <Link to="/todo">Todo</Link>
         <Link to="/about">About</Link>
         <Link to="/blog">Blog</Link>
         <Link to="/login">Login</Link>
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/todo" element={<Todo />} />
         <Route path="about" element={<About />}>
           <Route path="me" element={<AboutMe />} />
         </Route>
